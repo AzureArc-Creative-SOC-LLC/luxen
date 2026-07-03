@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { LogOut, Menu, Phone, User, X } from "lucide-react";
+import { LogOut, Menu, User, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
-import { Button } from "@/components/ui/Button";
 import CartButton from "@/components/cart/CartButton";
 import AccountMenu from "@/components/AccountMenu";
 import { NAV_LINKS } from "@/lib/data";
@@ -67,22 +66,10 @@ export default function Navbar() {
             mark="var(--brand)"
           />
 
-          {/* Right: contact + cta */}
+          {/* Right: account + cart */}
           <div className="flex items-center gap-4 md:gap-6">
-            <a
-              href="#contact"
-              className={cn(
-                "hidden items-center gap-2 text-sm font-semibold transition-colors sm:inline-flex",
-                scrolled ? "text-ink" : "text-white",
-              )}
-            >
-              <Phone size={16} className="text-brand" /> Contact
-            </a>
             <AccountMenu variant={scrolled ? "light" : "dark"} />
             <CartButton className={cn(scrolled ? "text-ink" : "text-white", "hover:text-brand")} />
-            <Button href="#appointment" variant="primary" className="hidden !py-2.5 sm:inline-flex">
-              GET A QUOTE
-            </Button>
           </div>
         </div>
       </div>
@@ -181,15 +168,6 @@ export default function Navbar() {
                     </Link>
                   </div>
                 )}
-
-                <Button
-                  href="#appointment"
-                  variant="primary"
-                  onClick={() => setOpen(false)}
-                  className="mt-1 w-full justify-center !py-4 text-base"
-                >
-                  GET A QUOTE
-                </Button>
               </motion.div>
             </motion.nav>
           </motion.div>
