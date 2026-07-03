@@ -1,0 +1,227 @@
+/* ---------------------------------------------------------------------------
+   API client for https://www.microservices.tech
+   Base URL is overridable via NEXT_PUBLIC_API_URL. Auth is a JWT bearer token
+   stored in localStorage (30-day expiry, HS256). Only the wallet/affiliate/
+   auth-verify endpoints strictly require the token — but we send it on every
+   request when present so future protected routes just work.
+--------------------------------------------------------------------------- */
+
+export const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL || "https://www.microservices.tech";
+
+export const TOKEN_KEY = "luxen-auth-token";
+export const USER_KEY = "luxen-auth-user";
+
+export type AuthUser = {
+  id: number;
+  name: string;
+  email: string;
+  phone?: string | null;
+  date_of_birth?: string | null;
+  nationality?: string | null;
+  country_of_residence?: string | null;
+  role?: string;
+};
+
+export function getToken(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return window.localStorage.getItem(TOKEN_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function setToken(token: string | null) {
+  if (typeof window === "undefined") return;
+  try {
+    if (token) window.localStorage.setItem(TOKEN_KEY, token);
+    else window.localStorage.removeItem(TOKEN_KEY);
+  } catch {
+    /* storage unavailable */
+  }
+}
+
+export function getStoredUser(): AuthUser | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(USER_KEY);
+    return raw ? (JSON.parse(raw) as AuthUser) : null;
+  } catch {
+    return null;
+  }
+}
+
+export function setStoredUser(user: AuthUser | null) {
+  if (typeof window === "undefined") return;
+  try {
+    if (user) window.localStorage.setItem(USER_KEY, JSON.stringify(user));
+    else window.localStorage.removeItem(USER_KEY);
+  } catch {
+    /* storage unavailable */
+  }
+}
+
+export class ApiError extends Error {
+  status: number;
+  data: unknown;
+  constructor(message: string, status: number, data: unknown) {
+    super(message);
+    this.name = "ApiError";
+    this.status = status;
+    this.data = data;
+  }
+}
+
+/** Extract a human message from any of the doc's error envelopes. */
+function extractErrorMessage(data: unknown, status: number): string {
+  if (data && typeof data === "object") {
+    const d = data as Record<string, unknown>;
+    for (const key of ["error", "message"] as const) {
+      const v = d[key];
+      if (typeof v === "string" && v.trim()) return v;
+    }
+  }
+  return `Request failed (${status})`;
+}
+
+type FetchOptions = Omit<RequestInit, "body"> & { body?: BodyInit | object | null };
+
+export async function apiFetch<T = unknown>(
+  path: string,
+  { body, headers: hIn, ...rest }: FetchOptions = {},
+): Promise<T> {
+  const headers = new Headers(hIn);
+  const token = getToken();
+  if (token) headers.set("Authorization", `Bearer ${token}`);
+
+  let finalBody: BodyInit | null | undefined;
+  if (body == null) {
+    finalBody = null;
+  } else if (
+    body instanceof FormData ||
+    body instanceof Blob ||
+    body instanceof ArrayBuffer ||
+    body instanceof URLSearchParams ||
+    typeof body === "string"
+  ) {
+    finalBody = body as BodyInit;
+  } else {
+    if (!headers.has("Content-Type")) headers.set("Content-Type", "application/json");
+    finalBody = JSON.stringify(body);
+  }
+
+  const res = await fetch(`${API_BASE}${path}`, {
+    ...rest,
+    headers,
+    body: finalBody,
+  });
+
+  const ct = res.headers.get("content-type") || "";
+  let data: unknown = null;
+  if (ct.includes("application/json")) {
+    data = await res.json().catch(() => null);
+  } else {
+    const text = await res.text().catch(() => "");
+    data = text || null;
+  }
+
+  if (!res.ok) throw new ApiError(extractErrorMessage(data, res.status), res.status, data);
+  return data as T;
+}
+
+/* ---------- Endpoint wrappers ---------------------------------------- */
+
+/** `POST /api/auth/register` */
+export function apiRegister(body: {
+  name: string;
+  email: string;
+  password: string;
+  date_of_birth: string; // YYYY-MM-DD
+  nationality: string;
+  country_of_residence: string;
+}) {
+  return apiFetch<{ success: true; token: string; user: AuthUser }>(
+    "/api/auth/register",
+    { method: "POST", body },
+  );
+}
+
+/** `POST /api/auth/login` */
+export function apiLogin(email: string, password: string) {
+  return apiFetch<{ success: true; token: string; user: AuthUser }>(
+    "/api/auth/login",
+    { method: "POST", body: { email, password } },
+  );
+}
+
+/** `GET /api/auth/verify` — requires bearer */
+export function apiVerify() {
+  return apiFetch<{ success: true; user: AuthUser }>("/api/auth/verify");
+}
+
+/** `POST /api/auth/forgot-password` */
+export function apiForgotPassword(email: string) {
+  return apiFetch<{ success: true; message: string }>(
+    "/api/auth/forgot-password",
+    { method: "POST", body: { email } },
+  );
+}
+
+/** `POST /api/promos/validate` */
+export function apiValidatePromo(code: string) {
+  return apiFetch<{ ok: true; valid: true; percent: number }>(
+    "/api/promos/validate",
+    { method: "POST", body: { code } },
+  );
+}
+
+export type CentralOrderInput = {
+  customer: { firstName: string; lastName: string; email: string; mobile: string };
+  shippingAddress: {
+    line1: string;
+    line2?: string;
+    city: string;
+    postcode: string;
+    country: string;
+  };
+  promoCode?: string;
+  items: { name: string; price: number; qty: number }[];
+  subtotal: number;
+  shipping: number;
+  discount: number;
+  total: number;
+};
+
+export type CentralOrderResult = {
+  ok: true;
+  success: true;
+  orderNumber: string;
+  orderId: number;
+  status: string;
+  paymentStatus: string;
+  paymentMethod: string;
+  totals: { subtotal: number; shipping: number; discount: number; total: number };
+  message: string;
+};
+
+/** `POST /api/central/orders` — details-only intake (no on-site payment) */
+export function apiCreateCentralOrder(input: CentralOrderInput) {
+  return apiFetch<CentralOrderResult>("/api/central/orders", {
+    method: "POST",
+    body: input,
+  });
+}
+
+/** `POST /api/newsletter/subscribe` — 5/IP/hour. `website` is a honeypot. */
+export function apiNewsletterSubscribe(input: {
+  email: string;
+  consent: boolean;
+  source?: string;
+  website?: string;
+}) {
+  return apiFetch<{ ok: true; id?: number; already_subscribed?: boolean }>(
+    "/api/newsletter/subscribe",
+    { method: "POST", body: input },
+  );
+}

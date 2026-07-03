@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   LUXEN — design system (recreated 1:1 from reference)
+   Font: Urbanist · Primary #0083C3 · Surface #EFF8FD · Ink #010101
+---------------------------------------------------------------------------- */
+
+:root {
+  --background: #ffffff;
+  --foreground: #010101;
+
+  --brand: #0083c3;
+  --brand-dark: #006fa8;
+  --brand-light: #329dd2;
+  --accent-light: #8dd9ff;
+  --surface: #eff8fd;
+  --ink: #010101;
+  --muted: #6e7276;
+  --muted-2: #757575;
+  --navy: #082238;
+  --navy-2: #0a2c49;
+  --line: rgba(1, 1, 1, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-light: var(--brand-light);
+  --color-accent-light: var(--accent-light);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+
+  --font-sans: var(--font-urbanist);
+
+  --radius-card: 16px;
+  --radius-xl2: 32px;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  /* Prevent iOS text auto-resize in landscape. */
+  -webkit-text-size-adjust: 100%;
+  /* `clip` stops horizontal overflow WITHOUT creating a scroll container,
+     so (unlike `hidden`) it doesn't break `position: sticky` on descendants. */
+  overflow-x: clip;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-urbanist), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: clip;
+}
+
+/* Media never overflows its container and stays crisp on hi-dpi displays. */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Comfortable, accessible tap targets + form controls on touch devices. */
+@media (pointer: coarse) {
+  button,
+  a[role="button"],
+  [type="button"],
+  [type="submit"] {
+    min-height: 48px;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  select,
+  textarea {
+    min-height: 48px;
+  }
+}
+
+/* Visible keyboard focus for accessibility (not shown for mouse/touch). */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@layer components {
+  /* Reusable layout container — reference uses 1600px max with comfortable gutters */
+  .container-luxen {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+    /* Respect device safe areas (notch/rounded corners) in landscape. */
+    padding-inline: max(24px, env(safe-area-inset-left)) max(24px, env(safe-area-inset-right));
+  }
+  @media (min-width: 1536px) {
+    .container-luxen {
+      max-width: 1440px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .container-luxen {
+      max-width: 1600px;
+    }
+  }
+  @media (max-width: 640px) {
+    .container-luxen {
+      padding-inline: max(18px, env(safe-area-inset-left)) max(18px, env(safe-area-inset-right));
+    }
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  /* Section display headings */
+  .h-display {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+}
+
+/* Hide scrollbars on horizontal sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Checkerboard ribbon (hero + process dividers) */
+.checker {
+  height: 18px;
+  background-image:
+    linear-gradient(45deg, #010101 25%, transparent 25%, transparent 75%, #010101 75%, #010101),
+    linear-gradient(45deg, #010101 25%, transparent 25%, transparent 75%, #010101 75%, #010101);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  background-color: #ffffff;
+}
+
+/* Faint blueprint grid (hero left) */
+.blueprint {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+@keyframes luxen-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: luxen-marquee var(--marquee-duration, 30s) linear infinite;
+}
+.animate-marquee-slow {
+  animation: luxen-marquee var(--marquee-duration, 45s) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-slow {
+    animation: none;
+  }
+}
