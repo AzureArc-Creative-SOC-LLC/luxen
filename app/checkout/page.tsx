@@ -9,7 +9,7 @@ import { Check } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/sections/Footer";
 import { useCart, formatGBP } from "@/lib/cart";
-import { ApiError, apiCreateCentralOrder, apiValidatePromo } from "@/lib/api";
+import { ApiError, apiCreateUserOrder, apiValidatePromo } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
 
 const COUNTRIES = [
@@ -121,35 +121,30 @@ export default function CheckoutPage() {
     setError(null);
     setPlacing(true);
     try {
-      const res = await apiCreateCentralOrder({
-        customer: {
-          firstName: form.firstName.trim(),
-          lastName: form.lastName.trim(),
-          email: form.email.trim(),
-          mobile: form.phone.trim(),
-        },
-        shippingAddress: {
-          line1: form.address1.trim(),
-          line2: form.address2.trim() || undefined,
-          city: form.city.trim(),
-          postcode: form.postcode.trim(),
-          country: form.country,
-        },
-        promoCode: promo?.code,
-        items: lines.map((l) => ({
+      const line1 = form.address1.trim();
+      const line2 = form.address2.trim();
+      const res = await apiCreateUserOrder({
+        email: form.email.trim(),
+        customerName: `${form.firstName.trim()} ${form.lastName.trim()}`.trim(),
+        phone: form.phone.trim(),
+        address: line2 ? `${line1}, ${line2}` : line1,
+        city: form.city.trim(),
+        postcode: form.postcode.trim(),
+        country: form.country,
+        itemsArray: lines.map((l) => ({
           name: l.product.title,
-          price: l.product.price,
-          qty: l.qty,
+          quantity: l.qty,
+          unitPrice: l.product.price,
+          sku: l.product.slug,
         })),
         subtotal,
-        shipping: 0,
-        discount,
+        discountAmount: discount,
         total,
+        promoCode: promo?.code ?? null,
+        promoDiscount: promo?.percent,
+        payment_method: "manual",
       });
-      setOrderResult({
-        orderNumber: res.orderNumber,
-        total: res.totals?.total ?? total,
-      });
+      setOrderResult({ orderNumber: res.orderNumber, total });
       setShowModal(true);
     } catch (err) {
       setError(
@@ -451,7 +446,7 @@ export default function CheckoutPage() {
                   <span className="text-ink">{orderResult.orderNumber}</span>
                 </div>
                 <div className="mt-3 flex items-center justify-between text-base font-bold">
-                  <span className="text-ink">Total paid</span>
+                  <span className="text-ink">Order total</span>
                   <span className="text-ink">{formatGBP(orderResult.total)}</span>
                 </div>
               </div>

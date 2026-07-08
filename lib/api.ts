@@ -176,38 +176,40 @@ export function apiValidatePromo(code: string) {
   );
 }
 
-export type CentralOrderInput = {
-  customer: { firstName: string; lastName: string; email: string; mobile: string };
-  shippingAddress: {
-    line1: string;
-    line2?: string;
-    city: string;
-    postcode: string;
-    country: string;
-  };
-  promoCode?: string;
-  items: { name: string; price: number; qty: number }[];
+export type UserOrderItem = {
+  name: string;
+  quantity: number;
+  unitPrice: number;
+  sku: string;
+};
+
+export type UserOrderInput = {
+  email: string;
+  customerName: string;
+  phone: string;
+  address: string;
+  city: string;
+  postcode: string;
+  country: string;
+  itemsArray: UserOrderItem[];
   subtotal: number;
-  shipping: number;
-  discount: number;
+  discountAmount: number;
   total: number;
+  promoCode: string | null;
+  promoDiscount?: number;
+  payment_method: "manual";
 };
 
-export type CentralOrderResult = {
-  ok: true;
+export type UserOrderResult = {
   success: true;
-  orderNumber: string;
   orderId: number;
-  status: string;
-  paymentStatus: string;
-  paymentMethod: string;
-  totals: { subtotal: number; shipping: number; discount: number; total: number };
-  message: string;
+  orderNumber: string;
+  email_debug?: unknown;
 };
 
-/** `POST /api/central/orders` — details-only intake (no on-site payment) */
-export function apiCreateCentralOrder(input: CentralOrderInput) {
-  return apiFetch<CentralOrderResult>("/api/central/orders", {
+/** `POST /api/user-orders` — details-only intake (no on-site payment) */
+export function apiCreateUserOrder(input: UserOrderInput) {
+  return apiFetch<UserOrderResult>("/api/user-orders", {
     method: "POST",
     body: input,
   });
