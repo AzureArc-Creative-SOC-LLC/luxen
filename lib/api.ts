@@ -7,7 +7,9 @@
 --------------------------------------------------------------------------- */
 
 export const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL || "https://www.microservices.tech";
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://www.microservices.tech";
+  // "http://localhost:5003";
 
 export const TOKEN_KEY = "luxen-auth-token";
 export const USER_KEY = "luxen-auth-user";
@@ -200,10 +202,30 @@ export type UserOrderInput = {
   payment_method: "manual";
 };
 
+export type UserOrderResultItem = {
+  name: string;
+  sku: string | null;
+  quantity: number;
+  unitPrice: number;
+  lineTotal: number;
+};
+
 export type UserOrderResult = {
   success: true;
   orderId: number;
   orderNumber: string;
+  customerName: string;
+  customerEmail: string;
+  phone: string;
+  shippingAddress: string;
+  shippingCity: string;
+  shippingPostcode: string;
+  shippingCountry: string;
+  currency: string;
+  subtotal: number;
+  discountAmount: number;
+  total: number;
+  items: UserOrderResultItem[];
   email_debug?: unknown;
 };
 

@@ -25,7 +25,12 @@ const COUNTRIES = [
 const INPUT =
   "w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors focus:border-brand focus:outline-none";
 
-type OrderResult = { orderNumber: string; total: number };
+type OrderResult = {
+  orderNumber: string;
+  total: number;
+  customerName: string;
+  customerEmail: string;
+};
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -144,7 +149,47 @@ export default function CheckoutPage() {
         promoDiscount: promo?.percent,
         payment_method: "manual",
       });
-      setOrderResult({ orderNumber: res.orderNumber, total });
+
+      // Fires the shared-email order confirmation using the order details the
+      // backend echoes back — not the raw form fields — so the email always
+      // reflects what was actually persisted. Best-effort: a failure here
+      // must never surface as a checkout error.
+      fetch("/api/send-order-confirmation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          customer: { name: res.customerName, email: res.customerEmail },
+          order: {
+            orderNumber: res.orderNumber,
+            currency: res.currency,
+            items: res.items.map((it) => ({
+              name: it.name,
+              quantity: it.quantity,
+              price: it.unitPrice,
+            })),
+            subtotal: res.subtotal,
+            shipping: 0,
+            tax: 0,
+            discount: res.discountAmount,
+            total: res.total,
+            shippingAddress: [
+              res.shippingAddress,
+              res.shippingCity,
+              res.shippingPostcode,
+              res.shippingCountry,
+            ]
+              .filter(Boolean)
+              .join(", "),
+          },
+        }),
+      }).catch((err) => console.error("[checkout] order confirmation email failed:", err));
+
+      setOrderResult({
+        orderNumber: res.orderNumber,
+        total: res.total,
+        customerName: res.customerName,
+        customerEmail: res.customerEmail,
+      });
       setShowModal(true);
     } catch (err) {
       setError(
@@ -436,8 +481,9 @@ export default function CheckoutPage() {
               </div>
               <h3 className="h-display mt-6 text-2xl tracking-[-0.02em] text-ink">Order placed</h3>
               <p className="mt-2 text-sm text-muted">
-                Thanks {form.firstName || "researcher"} — we&apos;ve received your order. A confirmation
-                will be sent to <span className="text-ink">{form.email || "your inbox"}</span>.
+                Thanks {orderResult.customerName.split(" ")[0] || "researcher"} — we&apos;ve received
+                your order. A confirmation will be sent to{" "}
+                <span className="text-ink">{orderResult.customerEmail || "your inbox"}</span>.
               </p>
 
               <div className="mt-6 rounded-2xl border border-black/10 bg-surface p-4 text-left">
