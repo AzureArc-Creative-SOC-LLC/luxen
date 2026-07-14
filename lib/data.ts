@@ -8,25 +8,30 @@
 /* All imagery is saved locally under /public/images and themed to the
    research-peptide / laboratory vertical. */
 export const IMG = {
-  heroPeople: "/images/hero-2.jpeg",
-  discover: "/images/about.jpeg",
-  alex: "/images/team-1.jpg",
-  statLab: "/images/lab-bench.jpg",
-  statDiag: "/images/molecular.jpg",
-  process: "/images/process-dna.jpg",
-  appointment: "/images/order-team.jpg",
-  doc1: "/images/team-1.jpg",
-  doc2: "/images/team-2.jpg",
-  doc3: "/images/team-3.jpg",
-  doc4: "/images/team-4.jpg",
-  blog1: "/images/blog-1.jpg",
-  blog2: "/images/blog-2.jpg",
-  blog3: "/images/blog-3.jpg",
-  av1: "/images/avatar-1.jpg",
-  av2: "/images/avatar-2.jpg",
-  av3: "/images/avatar-3.jpg",
-  av4: "/images/avatar-4.jpg",
-  av5: "/images/avatar-1.jpg",
+  heroPeople: "/images/hero-webp.webp",
+  discover: "/images/about-webp.webp",
+  alex: "/images/scientists.webp",
+  statLab: "/images/On-Time Delivery.webp",
+  statDiag: "/images/On-Time Delivery (2).webp",
+  process: "/images/our-process-bg.webp",
+  appointment: "/images/our-process-bg.webp",
+  doc1: "/images/scientists.webp",
+  doc2: "/images/scientists2.webp",
+  doc3: "/images/scientists3.webp",
+  doc4: "/images/scientists4.webp",
+  blog1: "/images/scientists2.webp",
+  blog2: "/images/scientists3.webp",
+  blog3: "/images/scientists4.webp",
+  av1: "/images/her-review-profile.webp",
+  av2: "/images/hero-review-profile2.webp",
+  av3: "/images/hero-review-profile3.webp",
+  av4: "/images/hero-review-profile4.webp",
+  av5: "/images/her-review-profile.webp",
+  test1: "/images/testimonial-1.webp",
+  test2: "/images/testimonial2.webp",
+  test3: "/images/testimonial3.webp",
+  test4: "/images/testimonial4.webp",
+  quoteRight: "/images/Quote-right-img.webp",
 };
 
 export const NAV_LINKS = [
@@ -190,25 +195,25 @@ export const TESTIMONIALS = [
     quote:
       "The certificates of analysis matched our own HPLC results to the decimal. Reordering has become the easiest part of running the lab.",
     name: "Research Associate, Cell Biology Lab",
-    avatar: IMG.av1,
+    avatar: IMG.test1,
   },
   {
     quote:
       "Consistent purity across batches is what we care about most, and LUXEN delivers it every single time. Cold-chain arrived intact.",
     name: "Principal Investigator",
-    avatar: IMG.av2,
+    avatar: IMG.test2,
   },
   {
     quote:
       "Transparent testing and fast, tracked shipping. Procurement used to be a headache — now it's a two-minute task.",
     name: "Lab Procurement Manager",
-    avatar: IMG.av3,
+    avatar: IMG.test3,
   },
   {
     quote:
       "Reproducible results start with reliable reagents. The documentation and batch traceability give us complete peace of mind.",
     name: "Biochemistry PhD Candidate",
-    avatar: IMG.av4,
+    avatar: IMG.test4,
   },
 ];
 

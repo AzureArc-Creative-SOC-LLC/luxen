@@ -12,14 +12,17 @@ const AVATARS = [IMG.av1, IMG.av2, IMG.av4];
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-[100svh] w-full overflow-hidden bg-navy">
-      {/* Background image */}
+      {/* Background image — LCP. Let next/image negotiate AVIF/WebP,
+          give it `priority` + high fetchPriority, and size accurately so
+          the browser picks a tight srcset rung instead of the largest. */}
       <Image
         src={IMG.heroPeople}
         alt="LUXEN research-grade peptides for laboratory R&D"
         fill
         priority
-        unoptimized
+        fetchPriority="high"
         sizes="100vw"
+        quality={80}
         className="object-cover object-center"
       />
       {/* Neutral fade at the bottom only — no blue shade — so the white

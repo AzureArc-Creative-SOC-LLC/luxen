@@ -26,6 +26,13 @@ export default function Navbar() {
 
   useEffect(() => {
     document.documentElement.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+    // Close on Escape — expected menu behavior for screen-reader / keyboard users.
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
   return (
@@ -51,10 +58,13 @@ export default function Navbar() {
               "inline-flex items-center gap-2 rounded-full bg-white px-3 py-2.5 text-[13px] font-bold tracking-wide shadow-sm transition-colors sm:px-4",
               "text-ink hover:bg-white",
             )}
-            aria-label="Open menu"
+            aria-label="Open navigation menu"
+            aria-expanded={open}
+            aria-controls="main-nav-drawer"
+            aria-haspopup="dialog"
           >
             <span className="hidden sm:inline">MENU</span>
-            <Menu size={18} strokeWidth={2.5} />
+            <Menu size={18} strokeWidth={2.5} aria-hidden="true" />
           </button>
 
           {/* Center: logo */}
@@ -78,6 +88,10 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="main-nav-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Main navigation"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

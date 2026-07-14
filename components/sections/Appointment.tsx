@@ -134,7 +134,7 @@ export default function Appointment() {
         <Reveal variants={revealRight} className="relative">
           <div className="relative h-full min-h-[480px] w-full overflow-hidden rounded-[28px]">
             <Image
-              src={IMG.appointment}
+              src={IMG.quoteRight}
               alt="LUXEN laboratory preparing a research order"
               fill
               className="object-cover"

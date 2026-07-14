@@ -336,7 +336,7 @@ export default function SignUpPage() {
       {/* Right — Visual panel: low-opacity lab image on dark backdrop */}
       <aside className="relative hidden overflow-hidden bg-navy lg:block">
         <Image
-          src="/images/molecular.jpg"
+          src="/images/our-process-bg.webp"
           alt=""
           fill
           priority
