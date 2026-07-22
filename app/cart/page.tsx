@@ -5,7 +5,7 @@ import CartPageClient from "./CartPageClient";
 export const metadata: Metadata = {
   title: "Your Cart",
   description:
-    "Review your selected LUXEN research peptides before checkout. Independently tested, cold-chain shipped, for laboratory R&D only.",
+    "Review your selected LUXEN research peptides before checkout. Independently tested and documented, for laboratory R&D only.",
   robots: { index: false, follow: true },
   alternates: { canonical: "/cart" },
 };

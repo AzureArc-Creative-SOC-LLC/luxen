@@ -49,10 +49,10 @@ export default function Stats() {
           </div>
           <span className="mt-2 text-xs font-semibold text-muted">4.5/5 (1,259)</span>
           <SplitReveal as="h2" className="h-display mt-5 max-w-3xl text-[clamp(2.2rem,4.6vw,3.4rem)]">
-            LUXEN delivers research-grade peptides for confident, reproducible science.
+            LUXEN supplies research-grade reference peptides for reproducible laboratory analysis.
           </SplitReveal>
           <p className="mt-4 text-[15px] text-muted">
-            Independently verified compounds for laboratory research only.
+            Independently verified reference material for laboratory research use only.
           </p>
         </Reveal>
 

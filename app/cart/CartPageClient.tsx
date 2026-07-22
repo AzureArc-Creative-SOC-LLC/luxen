@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/sections/Footer";
-import { useCart, formatGBP } from "@/lib/cart";
+import { useCart, formatUSD } from "@/lib/cart";
 
 export default function CartPageClient() {
   const { lines, count, subtotal, setQty, remove, clear } = useCart();
@@ -34,6 +34,21 @@ export default function CartPageClient() {
               ← Back to Catalog
             </Link>
           </div>
+
+          {/* Research-only compliance banner */}
+          {lines.length > 0 && (
+            <div className="mt-6 rounded-2xl border-l-4 border-brand bg-surface p-4 text-sm leading-relaxed text-ink">
+              <p className="font-bold uppercase tracking-wide text-brand">
+                Research reference material
+              </p>
+              <p className="mt-1 text-muted">
+                By proceeding with this purchase, you acknowledge that these products are
+                intended solely for laboratory research purposes and are not intended for human
+                or veterinary use. These products are not intended to diagnose, treat, cure, or
+                prevent any disease.
+              </p>
+            </div>
+          )}
 
           {lines.length === 0 ? (
             <EmptyCart />
@@ -72,7 +87,7 @@ export default function CartPageClient() {
                           >
                             {l.product.title}
                           </Link>
-                          <p className="mt-1 text-xs text-muted">{formatGBP(l.product.price)} each</p>
+                          <p className="mt-1 text-xs text-muted">{formatUSD(l.product.price)} each</p>
                         </div>
 
                         <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -102,7 +117,7 @@ export default function CartPageClient() {
                             </button>
                           </div>
                           <p className="w-20 text-right text-base font-bold text-ink">
-                            {formatGBP(l.lineTotal)}
+                            {formatUSD(l.lineTotal)}
                           </p>
                           <button
                             type="button"
@@ -141,16 +156,12 @@ export default function CartPageClient() {
                 <dl className="mt-6 space-y-3 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-muted">Subtotal</dt>
-                    <dd className="text-ink">{formatGBP(subtotal)}</dd>
-                  </div>
-                  <div className="flex justify-between">
-                    <dt className="text-muted">Tracked UK shipping</dt>
-                    <dd className="text-ink">Free</dd>
+                    <dd className="text-ink">{formatUSD(subtotal)}</dd>
                   </div>
                   <div className="my-4 h-px bg-black/10" role="separator" />
                   <div className="flex justify-between text-lg font-bold">
                     <dt className="text-ink">Total</dt>
-                    <dd className="text-ink">{formatGBP(total)}</dd>
+                    <dd className="text-ink">{formatUSD(total)}</dd>
                   </div>
                 </dl>
 
@@ -170,7 +181,7 @@ export default function CartPageClient() {
                 </Link>
 
                 <p className="mt-7 border-t border-black/10 pt-5 text-center text-[0.65rem] uppercase tracking-[0.22em] text-muted">
-                  For laboratory R&amp;D use only · Not for human or veterinary consumption
+                  For laboratory research use only · Not for human or veterinary use
                 </p>
               </aside>
             </div>

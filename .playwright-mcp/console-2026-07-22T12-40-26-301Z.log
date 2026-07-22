@@ -1,0 +1,8 @@
+[     420ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0fmn_next_dist_0y7r9cu._.js:2477
+[     487ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0fmn_next_dist_0y7r9cu._.js:2477
+[     683ms] [WARNING] Image with src "/images/bpc/bpcfrontnew.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/0fmn_next_dist_0y7r9cu._.js:2477
+[   52655ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0fmn_next_dist_0y7r9cu._.js:2477
+[   52675ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0fmn_next_dist_0y7r9cu._.js:2477
+[   53393ms] [WARNING] Image with src "/images/bpc/bpcfrontnew.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/0fmn_next_dist_0y7r9cu._.js:2477

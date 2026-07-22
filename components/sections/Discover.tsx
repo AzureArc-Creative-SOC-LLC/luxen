@@ -50,10 +50,12 @@ export default function Discover() {
             </Reveal>
             <Reveal>
               <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
-                At LUXEN, we develop and supply premium research peptides for laboratory and
-                in-vitro study. Every compound is synthesised to research-grade standards and
-                independently verified, so scientists can work with reagents they trust. For
-                research use only — not for human or veterinary consumption.
+                At LUXEN, we develop and supply premium research reference peptides for laboratory
+                and in-vitro analytical work. Every compound is synthesised to research-grade
+                standards and independently verified for identity, purity, and content — so
+                scientists can characterize their reagents with confidence. For research use only
+                — not intended to diagnose, treat, cure, or prevent any disease. Not for human or
+                veterinary use.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -72,7 +74,7 @@ export default function Discover() {
                 },
                 {
                   t: "Research-Grade Purity",
-                  d: "≥99% HPLC-verified peptides for reproducible, dependable experiments.",
+                  d: "≥99% HPLC-verified peptides for reproducible laboratory measurements.",
                 },
               ].map((f, i) => (
                 <Reveal key={f.t} delay={i * 0.1}>

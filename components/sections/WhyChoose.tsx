@@ -26,13 +26,13 @@ export default function WhyChoose() {
             </Reveal>
             <SplitReveal as="h2" className="h-display mt-5 text-[clamp(2.2rem,4.6vw,3.5rem)]">
               Your trusted partner in
-              <br className="hidden sm:block" /> research-grade peptides
+              <br className="hidden sm:block" /> research reference peptides
             </SplitReveal>
           </div>
           <Reveal>
             <p className="text-[15px] leading-relaxed text-muted lg:pb-3">
-              Independently tested, cold-chain handled, and shipped worldwide — built for
-              laboratories that need reproducible, research-grade compounds.
+              Independently tested and documented to the milligram — built for laboratories
+              that need reproducible reference material for analytical work.
             </p>
           </Reveal>
         </div>

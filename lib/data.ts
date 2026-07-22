@@ -57,6 +57,19 @@ export const BRAND_LOGOS = [
 
 /* Research-grade compounds. Catalog. Every batch independently lab tested.
    Supplied lyophilised for in-vitro research only. */
+export type CompoundRow = {
+  compound: string;
+  concentration: string;
+  verifiedContent: string;
+};
+
+export type ProductAnalysis = {
+  batchNumber: string;
+  fillVolume: string;
+  purity?: string;
+  compounds: CompoundRow[];
+};
+
 export type Product = {
   slug: string;
   title: string;
@@ -67,14 +80,19 @@ export type Product = {
   icon: string;
   price: number;
   specs: { label: string; value: string }[];
+  janoshikUrl: string;
+  certificateImages: string[];
+  analysis: ProductAnalysis;
+  packageContents: string[];
+  storage: string[];
 };
 
 export const SERVICES: Product[] = [
   {
     slug: "bpc-157-tb-500",
-    title: "BPC-157 & TB-500",
-    desc: "A regenerative research blend studied across tissue-repair and motility models. Supplied lyophilised at ≥99% HPLC-verified purity.",
-    long: "A combined research blend of BPC-157 (a pentadecapeptide) and TB-500 (a synthetic thymosin beta-4 fragment), widely used in tissue-repair, angiogenesis, and motility research models. Each lyophilised vial is independently assayed for purity, content, and identity, and ships with a certificate of analysis.",
+    title: "BPC-157 & TB-500 40mg (R&D Only)",
+    desc: "Research reference material combining a pentadecapeptide (BPC-157) and a synthetic thymosin beta-4 fragment (TB-500), supplied in a pre-filled research device and independently characterized by Janoshik Analytical.",
+    long: "A 40mg BPC-157 & TB-500 research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
     img: "/images/bpc/bpcfrontnew.jpg",
     gallery: [
       "/images/bpc/bpcfrontnew.jpg",
@@ -87,15 +105,38 @@ export const SERVICES: Product[] = [
     specs: [
       { label: "Quantity", value: "40 mg" },
       { label: "Purity", value: "≥99% (HPLC)" },
-      { label: "Form", value: "Lyophilised powder" },
+      { label: "Form", value: "Pre-filled research device" },
       { label: "Testing", value: "Janoshik third-party" },
+    ],
+    janoshikUrl:
+      "https://verify.janoshik.com/tests/163218-ALLUVI_BPC157_TB500_40MG_KIT_EAI125ZEF8TB",
+    certificateImages: [
+      "/certificates/bpc-157-tb-500-page1.jpg",
+      "/certificates/bpc-157-tb-500-page2.jpg",
+    ],
+    analysis: {
+      batchNumber: "BP1701FSR",
+      fillVolume: "3 mL",
+      compounds: [
+        { compound: "BPC-157", concentration: "7.33 mg/mL", verifiedContent: "21.99 mg" },
+        { compound: "TB-500", concentration: "6.53 mg/mL", verifiedContent: "19.59 mg" },
+      ],
+    },
+    packageContents: [
+      "Each BPC-157 & TB-500 40mg Research kit includes:",
+      "Pre-filled Research pen (20mg BPC-157, 20mg TB-500)",
+      "Research information sheet",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
   {
     slug: "retatrutide",
-    title: "Retatrutide",
-    desc: "Triple-agonist research peptide for metabolic-pathway investigation. Batch-tested for purity, content, and stability.",
-    long: "A triple-agonist research peptide used to investigate GLP-1 / GIP / glucagon receptor pathways in controlled metabolic studies. Every batch is independently verified for purity, content, and long-term stability, with documentation provided per lot.",
+    title: "Retatrutide 20mg (R&D Only)",
+    desc: "Research reference peptide supplied in a pre-filled analytical device. Batch-characterized for identity, purity, and content by Janoshik Analytical.",
+    long: "A 20mg Retatrutide research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
     img: "/images/retafourty/retafrontnew.jpg",
     gallery: [
       "/images/retafourty/retafrontnew.jpg",
@@ -104,19 +145,42 @@ export const SERVICES: Product[] = [
       "/images/retafourty/retauv.jpg",
     ],
     icon: "dna",
-    price: 180,
+    price: 100,
     specs: [
-      { label: "Quantity", value: "20–40 mg" },
+      { label: "Quantity", value: "20 mg" },
       { label: "Purity", value: "≥99% (HPLC)" },
-      { label: "Form", value: "Lyophilised powder" },
+      { label: "Form", value: "Pre-filled research device" },
       { label: "Testing", value: "Janoshik third-party" },
+    ],
+    janoshikUrl:
+      "https://verify.janoshik.com/tests/163215-ALLUVI_RETATRUTIDE_20MG_KIT_GBHEFN58JXXZ",
+    certificateImages: [
+      "/certificates/retatrutide-page1.jpg",
+      "/certificates/retatrutide-page2.jpg",
+    ],
+    analysis: {
+      batchNumber: "AR1721TRT",
+      fillVolume: "2.4 mL",
+      purity: "99.21%",
+      compounds: [
+        { compound: "Retatrutide", concentration: "9.57 mg/mL", verifiedContent: "22.96 mg" },
+      ],
+    },
+    packageContents: [
+      "Each Retatrutide 20mg Research kit includes:",
+      "Pre-filled Research pen (20mg Retatrutide)",
+      "Research information sheet",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
   {
     slug: "tirzepatide",
-    title: "Tirzepatide",
-    desc: "Dual GIP/GLP-1 receptor research compound for in-vitro metabolic studies. Each lot ships with a certificate of analysis.",
-    long: "A dual GIP/GLP-1 receptor research compound for in-vitro metabolic-pathway investigation. Synthesised to research-grade standards and independently assayed, each lot ships with a certificate of analysis confirming purity and content.",
+    title: "Tirzepatide 40mg (R&D Only)",
+    desc: "Research reference peptide supplied in a pre-filled analytical device for in-vitro laboratory characterization. Each lot ships with a Janoshik certificate of analysis.",
+    long: "A 40mg Tirzepatide research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
     img: "/images/tirzepetide/Artboard2.jpg",
     gallery: [
       "/images/tirzepetide/Artboard2.jpg",
@@ -129,15 +193,39 @@ export const SERVICES: Product[] = [
     specs: [
       { label: "Quantity", value: "40 mg" },
       { label: "Purity", value: "≥99% (HPLC)" },
-      { label: "Form", value: "Lyophilised powder" },
+      { label: "Form", value: "Pre-filled research device" },
       { label: "Testing", value: "Janoshik third-party" },
+    ],
+    janoshikUrl:
+      "https://verify.janoshik.com/tests/147174-ALLUVI_TIRZEPATIDE_40MG_KIT_T5MBWRAYD4HN",
+    certificateImages: [
+      "/certificates/tirzepatide-page1.jpg",
+      "/certificates/tirzepatide-page2.jpg",
+      "/certificates/tirzepatide-page3.jpg",
+    ],
+    analysis: {
+      batchNumber: "TR786PAOS",
+      fillVolume: "3 mL",
+      purity: "99.85%",
+      compounds: [
+        { compound: "Tirzepatide", concentration: "13.35 mg/mL", verifiedContent: "40.05 mg" },
+      ],
+    },
+    packageContents: [
+      "Each Tirzepatide 40mg Research kit includes:",
+      "Pre-filled Research pen (40mg Tirzepatide)",
+      "Research information sheet",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
   {
     slug: "glow-ghk-cu",
-    title: "Glow (GHK-Cu)",
-    desc: "Copper-binding tripeptide explored in matrix and skin-model research. Precisely measured and third-party verified.",
-    long: "A copper-binding tripeptide (GHK-Cu) explored in extracellular-matrix and skin-model research. Precisely measured, lyophilised, and independently verified for purity and identity so results stay reproducible across batches.",
+    title: "Glow 70mg (R&D Only)",
+    desc: "Copper-binding tripeptide (GHK-Cu) research reference material supplied for laboratory analytical characterization. Precisely measured and independently verified for identity and purity.",
+    long: "A 70mg Glow research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
     img: "/images/glow/glowfrontnew.jpg",
     gallery: [
       "/images/glow/glowfrontnew.jpg",
@@ -150,8 +238,32 @@ export const SERVICES: Product[] = [
     specs: [
       { label: "Quantity", value: "70 mg" },
       { label: "Purity", value: "≥99% (HPLC)" },
-      { label: "Form", value: "Lyophilised powder" },
+      { label: "Form", value: "Pre-filled research device" },
       { label: "Testing", value: "Janoshik third-party" },
+    ],
+    janoshikUrl:
+      "https://verify.janoshik.com/tests/163217-ALLUVI_GLOW_70MG_KIT_DCL3AJSE4JQP",
+    certificateImages: [
+      "/certificates/glow-ghk-cu-page1.jpg",
+      "/certificates/glow-ghk-cu-page2.jpg",
+    ],
+    analysis: {
+      batchNumber: "GL0621XSA",
+      fillVolume: "3.4 mL",
+      compounds: [
+        { compound: "GHK-Cu", concentration: "7.59 mg/mL", verifiedContent: "25.8 mg" },
+        { compound: "BPC-157", concentration: "2.39 mg/mL", verifiedContent: "8.13 mg" },
+        { compound: "TB-500", concentration: "1.99 mg/mL", verifiedContent: "6.76 mg" },
+      ],
+    },
+    packageContents: [
+      "Each Glow 70mg Research kit includes:",
+      "2 × Pre-filled Research pens (Each pen contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu)",
+      "Total contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
 ];
@@ -159,16 +271,16 @@ export const SERVICES: Product[] = [
 export const getProduct = (slug: string) => SERVICES.find((p) => p.slug === slug);
 
 export const WHY = [
-  { title: "Independently verified", desc: "Every batch is third-party lab tested for purity and content before release.", icon: "flask" },
-  { title: "Cold-chain integrity", desc: "Temperature-controlled handling from synthesis through to your bench.", icon: "snowflake" },
-  { title: "Tracked global shipping", desc: "Discreet, fully tracked dispatch with chain-of-custody on every order.", icon: "truck" },
-  { title: "Research-grade purity", desc: "≥99% HPLC-verified peptides for reproducible, dependable results.", icon: "shield" },
+  { title: "Independently verified", desc: "Every batch is third-party lab tested for identity, purity, and content before release.", icon: "flask" },
+  { title: "Reference-grade stability", desc: "Temperature-controlled handling from synthesis to storage keeps reference material stable for analytical work.", icon: "snowflake" },
+  { title: "Documented traceability", desc: "Batch numbers, certificates, and lot-level data logged for every research compound.", icon: "truck" },
+  { title: "Research-grade purity", desc: "≥99% HPLC-verified peptides for reproducible laboratory measurements.", icon: "shield" },
 ];
 
 export const PROCESS = [
-  { step: "Step", num: "1", title: "Select & Order", desc: "Browse the catalog and choose your research-grade compounds with confidence." },
-  { step: "Step", num: "2", title: "Verify & Test", desc: "Each batch is independently lab tested — certificates of analysis included." },
-  { step: "Step", num: "3", title: "Cold-Chain Delivery", desc: "Tracked, temperature-controlled shipping straight to your laboratory." },
+  { step: "Step", num: "1", title: "Select from Catalog", desc: "Browse the research catalog and choose the reference material appropriate for your laboratory work." },
+  { step: "Step", num: "2", title: "Independent Verification", desc: "Each batch is third-party lab tested for identity, purity, and content — certificates of analysis included." },
+  { step: "Step", num: "3", title: "Reproducible Reference", desc: "Every lot is traceable to a certificate of analysis so your analytical work stays consistent." },
 ];
 
 export const TEAM = [
@@ -186,32 +298,31 @@ export const VALUE_CHIPS = [
   "Reproducibility",
   "Compliance",
   "Batch Traceability",
-  "Discreet Shipping",
   "Research Integrity",
 ];
 
 export const TESTIMONIALS = [
   {
     quote:
-      "The certificates of analysis matched our own HPLC results to the decimal. Reordering has become the easiest part of running the lab.",
+      "The certificates of analysis matched our own HPLC readings to the decimal. Reordering reference material has become the easiest part of running the lab.",
     name: "Research Associate, Cell Biology Lab",
     avatar: IMG.test1,
   },
   {
     quote:
-      "Consistent purity across batches is what we care about most, and LUXEN delivers it every single time. Cold-chain arrived intact.",
+      "Consistent purity across batches is what we care about most for our analytical work, and the documentation confirms it every single time.",
     name: "Principal Investigator",
     avatar: IMG.test2,
   },
   {
     quote:
-      "Transparent testing and fast, tracked shipping. Procurement used to be a headache — now it's a two-minute task.",
+      "Transparent testing and honest documentation. Procurement of research reference material used to be a headache — now it's a two-minute task.",
     name: "Lab Procurement Manager",
     avatar: IMG.test3,
   },
   {
     quote:
-      "Reproducible results start with reliable reagents. The documentation and batch traceability give us complete peace of mind.",
+      "Reproducible analytical work starts with well-documented reagents. The batch traceability and certificates give us complete peace of mind.",
     name: "Biochemistry PhD Candidate",
     avatar: IMG.test4,
   },
@@ -225,8 +336,8 @@ export const POSTS = [
     img: IMG.blog1,
   },
   {
-    title: "Cold-Chain Logistics for Temperature-Sensitive Research Compounds",
-    category: "Logistics",
+    title: "Storing Temperature-Sensitive Research Compounds at the Bench",
+    category: "Lab Practice",
     date: { day: "20", dow: "TUE" },
     img: IMG.blog2,
   },
@@ -241,5 +352,5 @@ export const POSTS = [
 export const STATS = {
   consultations: { pct: 99, label: "Verified Purity", desc: "Every batch is independently tested by accredited third-party laboratories, with HPLC purity verification documented on each certificate of analysis." },
   treatments: { pct: 98, label: "Batch Consistency", desc: "Our synthesis and quality controls keep content and identity consistent from lot to lot, so your research stays reproducible." },
-  diagnostics: { pct: 96, label: "On-Time Delivery", desc: "Cold-chain tracked shipping keeps temperature-sensitive compounds stable and arriving on schedule, anywhere in the world." },
+  diagnostics: { pct: 96, label: "Batch Traceability", desc: "Every lot is documented end-to-end so your research remains fully auditable from compound to certificate." },
 };

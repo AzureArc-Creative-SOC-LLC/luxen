@@ -51,8 +51,8 @@ export default function Appointment() {
                   Request received{form.name ? `, ${form.name.split(" ")[0]}` : ""}!
                 </h2>
                 <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
-                  Thanks for your interest. Our team will confirm batch availability, pricing, and
-                  shipping details by email shortly.
+                  Thanks for your interest. Our team will confirm batch availability and pricing
+                  by email shortly.
                 </p>
                 <button
                   onClick={reset}
@@ -67,7 +67,9 @@ export default function Appointment() {
                   Request A Quote
                 </SplitReveal>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
-                  For laboratory research use only — not for human or veterinary consumption.
+                  Research reference material — for laboratory and analytical use only. Not
+                  intended to diagnose, treat, cure, or prevent any disease. Not for human or
+                  veterinary use.
                 </p>
 
                 <div className="mt-7 space-y-5">
@@ -114,7 +116,7 @@ export default function Appointment() {
                       onChange={set("notes")}
                       className={field}
                       type="text"
-                      placeholder="Batch, COA, or shipping notes"
+                      placeholder="Batch, COA, or research notes"
                     />
                   </Labeled>
 

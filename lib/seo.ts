@@ -11,10 +11,10 @@ export const SITE_URL = (
 export const SITE_NAME = "LUXEN";
 
 export const SITE_TAGLINE =
-  "Premium Research Peptides for Laboratory R&D";
+  "Premium Research Reference Peptides for Laboratory Analysis";
 
 export const SITE_DESCRIPTION =
-  "LUXEN supplies premium, independently tested research peptides for laboratory and in-vitro studies. ≥99% HPLC-verified purity, cold-chain handling, tracked worldwide shipping. Research use only — not for human or veterinary consumption.";
+  "LUXEN supplies premium, independently tested research reference peptides for laboratory and in-vitro analytical work. ≥99% HPLC-verified purity, batch-level certificates of analysis. For research use only — not intended to diagnose, treat, cure, or prevent any disease. Not for human or veterinary use.";
 
 export const OG_IMAGE = {
   url: "/images/hero-webp.webp",

@@ -115,7 +115,7 @@ export function useCart() {
   return ctx;
 }
 
-export const formatGBP = (n: number) => `£${n.toLocaleString("en-GB")}`;
+export const formatUSD = (n: number) => `$${n.toLocaleString("en-US")}`;
 
 // Re-export so consumers can grab the full catalog without another import.
 export { SERVICES as PRODUCTS };

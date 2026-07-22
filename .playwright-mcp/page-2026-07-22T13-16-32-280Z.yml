@@ -1,0 +1,181 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "LUXEN home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: LUXEN
+      - generic [ref=e11]:
+        - link "Catalog" [ref=e12] [cursor=pointer]:
+          - /url: /#services
+        - button "Open cart" [ref=e14]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - navigation "Breadcrumb" [ref=e20]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "Home" [ref=e23] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e24]: /
+          - listitem [ref=e25]:
+            - link "Catalog" [ref=e26] [cursor=pointer]:
+              - /url: /#services
+          - listitem [ref=e29]: /
+          - listitem [ref=e30]: Retatrutide 20mg (R&D Only)
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - img "Retatrutide 20mg (R&D Only) — research-grade peptide" [ref=e34]
+          - tablist "Product images" [ref=e35]:
+            - tab "Show image 1 of 4" [selected] [ref=e36]
+            - tab "Show image 2 of 4" [ref=e37]
+            - tab "Show image 3 of 4" [ref=e38]
+            - tab "Show image 4 of 4" [ref=e39]
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Compound Analysis
+          - heading "Retatrutide 20mg (R&D Only)" [level=1] [ref=e42]
+          - paragraph [ref=e43]:
+            - generic [ref=e44]: "Price:"
+            - text: $100USD
+          - paragraph [ref=e45]: A 20mg Retatrutide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+          - paragraph [ref=e50]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - link "View Janoshik Analytical Report" [ref=e51] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/163215-ALLUVI_RETATRUTIDE_20MG_KIT_GBHEFN58JXXZ
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=2] [ref=e61]
+              - paragraph [ref=e62]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - paragraph [ref=e65]: Batch Number
+                - paragraph [ref=e66]: AR1721TRT
+              - generic [ref=e67]:
+                - paragraph [ref=e68]: Fill Volume
+                - paragraph [ref=e69]: 2.4 mL
+              - generic [ref=e70]:
+                - paragraph [ref=e71]: Purity
+                - paragraph [ref=e72]: 99.21%
+            - table [ref=e74]:
+              - rowgroup [ref=e75]:
+                - row [ref=e76]:
+                  - columnheader "Compound" [ref=e77]
+                  - columnheader "Concentration" [ref=e78]
+                  - columnheader "Verified Content" [ref=e79]
+              - rowgroup [ref=e80]:
+                - row [ref=e81]:
+                  - cell "Retatrutide" [ref=e82]
+                  - cell "9.57 mg/mL" [ref=e83]
+                  - cell "22.96 mg" [ref=e84]
+            - paragraph [ref=e85]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+            - button [ref=e86]:
+              - generic [ref=e91]: +
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - term [ref=e94]: Quantity
+              - definition [ref=e95]: 20 mg
+            - generic [ref=e96]:
+              - term [ref=e97]: Purity
+              - definition [ref=e98]: ≥99% (HPLC)
+            - generic [ref=e99]:
+              - term [ref=e100]: Form
+              - definition [ref=e101]: Pre-filled research device
+            - generic [ref=e102]:
+              - term [ref=e103]: Testing
+              - definition [ref=e104]: Janoshik third-party
+          - generic [ref=e105]:
+            - tablist "Product information" [ref=e106]:
+              - tab "Package Contents" [selected] [ref=e107]
+              - tab "Storage Logic" [ref=e112]
+            - list [ref=e126]:
+              - listitem [ref=e127]: "Each Retatrutide 20mg Research kit includes:"
+              - listitem [ref=e128]: Pre-filled Research pen (20mg Retatrutide)
+              - listitem [ref=e129]: Research information sheet
+          - generic [ref=e130]:
+            - group "Quantity selector" [ref=e131]:
+              - button "Decrease quantity" [ref=e132]
+              - generic [ref=e134]: "1"
+              - button "Increase quantity" [ref=e135]
+            - button "Add 1 × Retatrutide 20mg (R&D Only) to cart" [ref=e137]: Add to Cart
+          - list [ref=e141]:
+            - listitem [ref=e142]: ≥99% HPLC purity
+            - listitem [ref=e146]: Independently tested
+            - listitem [ref=e149]: Batch-level certificates
+          - paragraph [ref=e153]: For laboratory research and development use only — not for human or veterinary consumption.
+      - region [ref=e154]:
+        - generic [ref=e155]:
+          - heading "Continue Your Research" [level=2] [ref=e156]
+          - link "View all" [ref=e157] [cursor=pointer]:
+            - /url: /#services
+        - paragraph [ref=e158]: Handpicked research kits that pair well with Retatrutide 20mg (R&D Only).
+        - generic [ref=e159]:
+          - link [ref=e160] [cursor=pointer]:
+            - /url: /product/bpc-157-tb-500
+            - article [ref=e161]:
+              - img "BPC-157 & TB-500 40mg (R&D Only) — research peptide" [ref=e163]
+              - generic [ref=e164]:
+                - paragraph [ref=e165]: Compound
+                - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=3] [ref=e166]
+                - paragraph [ref=e167]: A regenerative research blend studied across tissue-repair and motility models. Supplied in a pre-filled research device, independently verified by Janoshik Analytical.
+                - generic [ref=e168]: $130
+          - link [ref=e174] [cursor=pointer]:
+            - /url: /product/tirzepatide
+            - article [ref=e175]:
+              - img "Tirzepatide 40mg (R&D Only) — research peptide" [ref=e177]
+              - generic [ref=e178]:
+                - paragraph [ref=e179]: Compound
+                - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=e180]
+                - paragraph [ref=e181]: Dual GIP/GLP-1 receptor research compound for in-vitro metabolic studies. Each lot ships with a Janoshik certificate of analysis.
+                - generic [ref=e182]: $100
+          - link [ref=e188] [cursor=pointer]:
+            - /url: /product/glow-ghk-cu
+            - article [ref=e189]:
+              - img "Glow 70mg (R&D Only) — research peptide" [ref=e191]
+              - generic [ref=e192]:
+                - paragraph [ref=e193]: Compound
+                - heading "Glow 70mg (R&D Only)" [level=3] [ref=e194]
+                - paragraph [ref=e195]: Copper-binding tripeptide blend explored in matrix and skin-model research. Precisely measured and independently verified.
+                - generic [ref=e196]: $100
+  - contentinfo [ref=e202]:
+    - generic [ref=e203]:
+      - generic [ref=e205]:
+        - generic [ref=e206]: LUXEN
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - paragraph [ref=e214]: LUXEN supplies premium, independently tested research peptides for laboratories worldwide. Research use only — not for human consumption.
+            - generic [ref=e215]:
+              - paragraph [ref=e216]: Sign up to receive the latest news and events from us.
+              - generic [ref=e217]:
+                - textbox "Your Email*" [ref=e218]
+                - button "Subscribe" [ref=e219]
+              - generic [ref=e220] [cursor=pointer]:
+                - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=e221]
+                - text: I agree to receive occasional updates from LUXEN.
+          - generic [ref=e222]:
+            - link "Home" [ref=e223] [cursor=pointer]:
+              - /url: "#"
+            - link "About" [ref=e224] [cursor=pointer]:
+              - /url: "#"
+            - link "Products" [ref=e225] [cursor=pointer]:
+              - /url: "#"
+            - link "Our Team" [ref=e226] [cursor=pointer]:
+              - /url: "#"
+            - link "Contact" [ref=e227] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e228]:
+            - generic [ref=e229]: Copyright © 2026 LUXEN
+            - generic [ref=e230]:
+              - link "Refund Policy" [ref=e231] [cursor=pointer]:
+                - /url: "#"
+              - link "Terms" [ref=e232] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e234]:
+        - link "X" [ref=e235] [cursor=pointer]:
+          - /url: "#"
+        - link "LinkedIn" [ref=e238] [cursor=pointer]:
+          - /url: "#"
+        - link "Dribbble" [ref=e241] [cursor=pointer]:
+          - /url: "#"
+        - link "Facebook" [ref=e245] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e248]: Independently tested · For laboratory research and development use only — not for human or veterinary consumption.
+  - button "Open Next.js Dev Tools" [ref=e254] [cursor=pointer]

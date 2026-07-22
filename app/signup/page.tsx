@@ -356,11 +356,11 @@ export default function SignUpPage() {
 
           <div className="mt-auto">
             <h2 className="h-display text-3xl leading-[1.15] tracking-[-0.01em] lg:text-4xl">
-              Pharmaceutical rigor, in every vial.
+              Pharmaceutical rigor, in every batch.
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">
-              Every batch is independently HPLC-verified, cold-chain shipped, and documented to the
-              milligram — so your research stays reproducible from lot to lot.
+              Every batch is independently HPLC-verified and documented to the milligram — so your
+              research stays reproducible from lot to lot.
             </p>
           </div>
         </div>

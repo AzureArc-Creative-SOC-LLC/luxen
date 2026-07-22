@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
-import { useCart, formatGBP } from "@/lib/cart";
+import { useCart, formatUSD } from "@/lib/cart";
 
 export default function CartDrawer() {
   const { isOpen, closeCart, lines, count, subtotal, setQty, remove } = useCart();
@@ -89,7 +89,7 @@ export default function CartDrawer() {
                             <Trash2 size={16} />
                           </button>
                         </div>
-                        <span className="text-xs text-muted">{formatGBP(l.product.price)} each</span>
+                        <span className="text-xs text-muted">{formatUSD(l.product.price)} each</span>
                         <div className="mt-auto flex items-center justify-between pt-2">
                           <div className="flex items-center gap-1 rounded-full border border-black/10">
                             <button
@@ -108,7 +108,7 @@ export default function CartDrawer() {
                               <Plus size={14} />
                             </button>
                           </div>
-                          <span className="text-sm font-bold text-ink">{formatGBP(l.lineTotal)}</span>
+                          <span className="text-sm font-bold text-ink">{formatUSD(l.lineTotal)}</span>
                         </div>
                       </div>
                     </div>
@@ -119,7 +119,7 @@ export default function CartDrawer() {
                 <div className="border-t border-black/10 px-6 py-5">
                   <div className="mb-4 flex items-center justify-between">
                     <span className="text-sm text-muted">Subtotal</span>
-                    <span className="text-xl font-extrabold text-ink">{formatGBP(subtotal)}</span>
+                    <span className="text-xl font-extrabold text-ink">{formatUSD(subtotal)}</span>
                   </div>
                   <Link
                     href="/checkout"

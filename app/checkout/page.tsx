@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/sections/Footer";
-import { useCart, formatGBP } from "@/lib/cart";
+import { useCart, formatUSD } from "@/lib/cart";
 import { ApiError, apiCreateUserOrder, apiValidatePromo } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
 
@@ -228,6 +228,19 @@ export default function CheckoutPage() {
             </Link>
           </div>
 
+          {/* Research-only compliance banner */}
+          <div className="mt-6 rounded-2xl border-l-4 border-brand bg-surface p-4 text-sm leading-relaxed text-ink">
+            <p className="font-bold uppercase tracking-wide text-brand">
+              Research reference material
+            </p>
+            <p className="mt-1 text-muted">
+              By proceeding with this purchase, you acknowledge that these products are intended
+              solely for laboratory research purposes and are not intended for human or veterinary
+              use. These products are not intended to diagnose, treat, cure, or prevent any
+              disease.
+            </p>
+          </div>
+
           <form onSubmit={submit} className="mt-10 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
             {/* Left — form */}
             <div className="flex flex-col gap-10">
@@ -272,7 +285,7 @@ export default function CheckoutPage() {
               </section>
 
               <section>
-                <h2 className="text-xl font-bold text-ink">Shipping address</h2>
+                <h2 className="text-xl font-bold text-ink">Delivery address</h2>
                 <div className="mt-5 grid gap-4">
                   <input
                     className={INPUT}
@@ -351,7 +364,7 @@ export default function CheckoutPage() {
                       <p className="text-sm font-bold text-ink">{l.product.title}</p>
                       <p className="text-xs text-muted">Research peptide</p>
                     </div>
-                    <p className="text-sm text-ink">{formatGBP(l.lineTotal)}</p>
+                    <p className="text-sm text-ink">{formatUSD(l.lineTotal)}</p>
                   </li>
                 ))}
               </ul>
@@ -411,22 +424,18 @@ export default function CheckoutPage() {
               <dl className="mt-6 space-y-3 text-sm">
                 <div className="flex justify-between">
                   <dt className="text-muted">Subtotal</dt>
-                  <dd className="text-ink">{formatGBP(subtotal)}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-muted">Tracked UK shipping</dt>
-                  <dd className="text-ink">Free</dd>
+                  <dd className="text-ink">{formatUSD(subtotal)}</dd>
                 </div>
                 {discount > 0 && (
                   <div className="flex justify-between">
                     <dt className="text-muted">Discount</dt>
-                    <dd className="text-brand">−{formatGBP(discount)}</dd>
+                    <dd className="text-brand">−{formatUSD(discount)}</dd>
                   </div>
                 )}
                 <div className="my-4 h-px bg-black/10" />
                 <div className="flex justify-between text-lg font-bold">
                   <dt className="text-ink">Total</dt>
-                  <dd className="text-ink">{formatGBP(total)}</dd>
+                  <dd className="text-ink">{formatUSD(total)}</dd>
                 </div>
               </dl>
 
@@ -436,10 +445,16 @@ export default function CheckoutPage() {
                 </p>
               )}
 
+              <p className="mt-6 text-[11px] leading-relaxed text-muted">
+                By placing this order you acknowledge that these products are research reference
+                material, intended solely for laboratory research and not for human or veterinary
+                use. They are not intended to diagnose, treat, cure, or prevent any disease.
+              </p>
+
               <button
                 type="submit"
                 disabled={placing || lines.length === 0}
-                className="mt-7 w-full rounded-full bg-brand py-3.5 text-sm font-medium text-white transition-all hover:bg-brand-dark hover:shadow-[0_20px_40px_-20px_rgba(0,131,195,0.6)] disabled:opacity-70"
+                className="mt-4 w-full rounded-full bg-brand py-3.5 text-sm font-medium text-white transition-all hover:bg-brand-dark hover:shadow-[0_20px_40px_-20px_rgba(0,131,195,0.6)] disabled:opacity-70"
               >
                 {placing ? "Placing order…" : "Place Order"}
               </button>
@@ -493,7 +508,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="mt-3 flex items-center justify-between text-base font-bold">
                   <span className="text-ink">Order total</span>
-                  <span className="text-ink">{formatGBP(orderResult.total)}</span>
+                  <span className="text-ink">{formatUSD(orderResult.total)}</span>
                 </div>
               </div>
 

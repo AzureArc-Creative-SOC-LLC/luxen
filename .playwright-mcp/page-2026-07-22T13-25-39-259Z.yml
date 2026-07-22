@@ -1,0 +1,182 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "LUXEN home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: LUXEN
+      - generic [ref=e11]:
+        - link "Catalog" [ref=e12] [cursor=pointer]:
+          - /url: /#services
+        - button "Open cart" [ref=e14]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - navigation "Breadcrumb" [ref=e20]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "Home" [ref=e23] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e24]: /
+          - listitem [ref=e25]:
+            - link "Catalog" [ref=e26] [cursor=pointer]:
+              - /url: /#services
+          - listitem [ref=e29]: /
+          - listitem [ref=e30]: BPC-157 & TB-500 40mg (R&D Only)
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - img "BPC-157 & TB-500 40mg (R&D Only) — research-grade peptide" [ref=e34]
+          - tablist "Product images" [ref=e35]:
+            - tab "Show image 1 of 4" [selected] [ref=e36]
+            - tab "Show image 2 of 4" [ref=e37]
+            - tab "Show image 3 of 4" [ref=e38]
+            - tab "Show image 4 of 4" [ref=e39]
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Compound Analysis
+          - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=1] [ref=e42]
+          - paragraph [ref=e43]:
+            - generic [ref=e44]: "Price:"
+            - text: $130USD
+          - paragraph [ref=e45]: A 40mg BPC-157 & TB-500 formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+          - paragraph [ref=e50]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - link "View Janoshik Analytical Report" [ref=e51] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/163218-ALLUVI_BPC157_TB500_40MG_KIT_EAI125ZEF8TB
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=2] [ref=e61]
+              - paragraph [ref=e62]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - paragraph [ref=e65]: Batch Number
+                - paragraph [ref=e66]: BP1701FSR
+              - generic [ref=e67]:
+                - paragraph [ref=e68]: Fill Volume
+                - paragraph [ref=e69]: 3 mL
+            - table [ref=e71]:
+              - rowgroup [ref=e72]:
+                - row [ref=e73]:
+                  - columnheader "Compound" [ref=e74]
+                  - columnheader "Concentration" [ref=e75]
+                  - columnheader "Verified Content" [ref=e76]
+              - rowgroup [ref=e77]:
+                - row [ref=e78]:
+                  - cell "BPC-157" [ref=e79]
+                  - cell "7.33 mg/mL" [ref=e80]
+                  - cell "21.99 mg" [ref=e81]
+                - row [ref=e82]:
+                  - cell "TB-500" [ref=e83]
+                  - cell "6.53 mg/mL" [ref=e84]
+                  - cell "19.59 mg" [ref=e85]
+            - paragraph [ref=e86]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+            - button [ref=e87]:
+              - generic [ref=e92]: +
+          - generic [ref=e93]:
+            - generic [ref=e94]:
+              - term [ref=e95]: Quantity
+              - definition [ref=e96]: 40 mg
+            - generic [ref=e97]:
+              - term [ref=e98]: Purity
+              - definition [ref=e99]: ≥99% (HPLC)
+            - generic [ref=e100]:
+              - term [ref=e101]: Form
+              - definition [ref=e102]: Pre-filled research device
+            - generic [ref=e103]:
+              - term [ref=e104]: Testing
+              - definition [ref=e105]: Janoshik third-party
+          - generic [ref=e106]:
+            - tablist "Product information" [ref=e107]:
+              - tab "Package Contents" [selected] [ref=e108]
+              - tab "Storage Logic" [ref=e113]
+            - list [ref=e127]:
+              - listitem [ref=e128]: "Each BPC-157 & TB-500 40mg Research kit includes:"
+              - listitem [ref=e129]: Pre-filled Research pen (20mg BPC-157, 20mg TB-500)
+              - listitem [ref=e130]: Research information sheet
+          - generic [ref=e131]:
+            - group "Quantity selector" [ref=e132]:
+              - button "Decrease quantity" [ref=e133]
+              - generic [ref=e135]: "1"
+              - button "Increase quantity" [ref=e136]
+            - button "Add 1 × BPC-157 & TB-500 40mg (R&D Only) to cart" [ref=e138]: Add to Cart
+          - list [ref=e142]:
+            - listitem [ref=e143]: ≥99% HPLC purity
+            - listitem [ref=e147]: Independently tested
+            - listitem [ref=e150]: Batch-level certificates
+          - paragraph [ref=e154]: For laboratory research and development use only — not for human or veterinary consumption.
+      - region [ref=e155]:
+        - generic [ref=e156]:
+          - heading "Continue Your Research" [level=2] [ref=e157]
+          - link "View all" [ref=e158] [cursor=pointer]:
+            - /url: /#services
+        - paragraph [ref=e159]: Handpicked research kits that pair well with BPC-157 & TB-500 40mg (R&D Only).
+        - generic [ref=e160]:
+          - link [ref=e161] [cursor=pointer]:
+            - /url: /product/retatrutide
+            - article [ref=e162]:
+              - img "Retatrutide 20mg (R&D Only) — research peptide" [ref=e164]
+              - generic [ref=e165]:
+                - paragraph [ref=e166]: Compound
+                - heading "Retatrutide 20mg (R&D Only)" [level=3] [ref=e167]
+                - paragraph [ref=e168]: Triple-agonist research peptide for metabolic-pathway investigation. Batch-tested for purity, content, and stability by Janoshik Analytical.
+                - generic [ref=e169]: $100
+          - link [ref=e175] [cursor=pointer]:
+            - /url: /product/tirzepatide
+            - article [ref=e176]:
+              - img "Tirzepatide 40mg (R&D Only) — research peptide" [ref=e178]
+              - generic [ref=e179]:
+                - paragraph [ref=e180]: Compound
+                - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=e181]
+                - paragraph [ref=e182]: Dual GIP/GLP-1 receptor research compound for in-vitro metabolic studies. Each lot ships with a Janoshik certificate of analysis.
+                - generic [ref=e183]: $100
+          - link [ref=e189] [cursor=pointer]:
+            - /url: /product/glow-ghk-cu
+            - article [ref=e190]:
+              - img "Glow 70mg (R&D Only) — research peptide" [ref=e192]
+              - generic [ref=e193]:
+                - paragraph [ref=e194]: Compound
+                - heading "Glow 70mg (R&D Only)" [level=3] [ref=e195]
+                - paragraph [ref=e196]: Copper-binding tripeptide blend explored in matrix and skin-model research. Precisely measured and independently verified.
+                - generic [ref=e197]: $100
+  - contentinfo [ref=e203]:
+    - generic [ref=e204]:
+      - generic [ref=e206]:
+        - generic [ref=e207]: LUXEN
+        - generic [ref=e213]:
+          - generic [ref=e214]:
+            - paragraph [ref=e215]: LUXEN supplies premium, independently tested research peptides for laboratories worldwide. Research use only — not for human consumption.
+            - generic [ref=e216]:
+              - paragraph [ref=e217]: Sign up to receive the latest news and events from us.
+              - generic [ref=e218]:
+                - textbox "Your Email*" [ref=e219]
+                - button "Subscribe" [ref=e220]
+              - generic [ref=e221] [cursor=pointer]:
+                - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=e222]
+                - text: I agree to receive occasional updates from LUXEN.
+          - generic [ref=e223]:
+            - link "Home" [ref=e224] [cursor=pointer]:
+              - /url: "#"
+            - link "About" [ref=e225] [cursor=pointer]:
+              - /url: "#"
+            - link "Products" [ref=e226] [cursor=pointer]:
+              - /url: "#"
+            - link "Our Team" [ref=e227] [cursor=pointer]:
+              - /url: "#"
+            - link "Contact" [ref=e228] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e229]:
+            - generic [ref=e230]: Copyright © 2026 LUXEN
+            - generic [ref=e231]:
+              - link "Refund Policy" [ref=e232] [cursor=pointer]:
+                - /url: "#"
+              - link "Terms" [ref=e233] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e235]:
+        - link "X" [ref=e236] [cursor=pointer]:
+          - /url: "#"
+        - link "LinkedIn" [ref=e239] [cursor=pointer]:
+          - /url: "#"
+        - link "Dribbble" [ref=e242] [cursor=pointer]:
+          - /url: "#"
+        - link "Facebook" [ref=e246] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e249]: Independently tested · For laboratory research and development use only — not for human or veterinary consumption.
+  - button "Open Next.js Dev Tools" [ref=e255] [cursor=pointer]

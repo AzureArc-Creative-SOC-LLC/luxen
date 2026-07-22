@@ -1,0 +1,133 @@
+- generic [ref=e2]:
+  - status "Important notice" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+      - generic [ref=e6]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+  - generic [ref=e7]:
+    - banner [ref=e8]:
+      - generic [ref=e10]:
+        - link [ref=e11] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=e12]
+        - link "Shop" [ref=e14] [cursor=pointer]:
+          - /url: /shop
+        - link "Track" [ref=e18] [cursor=pointer]:
+          - /url: /track-order
+        - link "Wholesale" [ref=e22] [cursor=pointer]:
+          - /url: /wholesale
+        - link "About Us" [ref=e26] [cursor=pointer]:
+          - /url: /about
+        - link "Verify" [ref=e30] [cursor=pointer]:
+          - /url: https://spotafakealluvi.com/
+        - link "Alluvi Brazil" [ref=e34] [cursor=pointer]:
+          - /url: https://alluvibrazil.org/
+    - main [ref=e37]:
+      - generic [ref=e39]:
+        - generic [ref=e41]:
+          - img "BPC-157 & TB-500 40mg Product" [ref=e43]
+          - generic [ref=e44]:
+            - button "View image" [ref=e45] [cursor=pointer]:
+              - img "BPC-157 & TB-500 40mg Product" [ref=e46]
+            - button "View image" [ref=e47] [cursor=pointer]:
+              - img "BPC-157 & TB-500 40mg Product" [ref=e48]
+            - button "View image" [ref=e49] [cursor=pointer]:
+              - img "BPC-157 & TB-500 40mg Product" [ref=e50]
+            - button "View image" [ref=e51] [cursor=pointer]:
+              - img "BPC-157 & TB-500 40mg Product" [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e54]: Compound Analysis
+          - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=1] [ref=e55]
+          - generic [ref=e56]: £130
+          - generic [ref=e58]:
+            - paragraph [ref=e59]: A 40mg BPC-157 & TB-500 formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+            - generic [ref=e60]:
+              - strong [ref=e61]: "Safety Protocol:"
+              - text: Produced for laboratory research only. Not for human or veterinary consumption.
+          - link "View Janoshik Analytical Report" [ref=e62] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/163218-ALLUVI_BPC157_TB500_40MG_KIT_EAI125ZEF8TB
+          - generic [ref=e66]:
+            - generic [ref=e71]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=3] [ref=e72]
+              - paragraph [ref=e73]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - generic [ref=e76]: Batch Number
+                - generic [ref=e77]: BP1701FSR
+              - generic [ref=e78]:
+                - generic [ref=e79]: Fill Volume
+                - generic [ref=e80]: 3 mL
+            - table [ref=e81]:
+              - rowgroup [ref=e82]:
+                - row [ref=e83]:
+                  - columnheader "Compound" [ref=e84]
+                  - columnheader "Concentration" [ref=e85]
+                  - columnheader "Verified Content" [ref=e86]
+              - rowgroup [ref=e87]:
+                - row [ref=e88]:
+                  - cell "BPC-157" [ref=e89]
+                  - cell "7.33 mg/mL" [ref=e90]
+                  - cell "21.99 mg" [ref=e91]
+                - row [ref=e92]:
+                  - cell "TB-500" [ref=e93]
+                  - cell "6.53 mg/mL" [ref=e94]
+                  - cell "19.59 mg" [ref=e95]
+            - paragraph [ref=e96]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - button "Package Contents" [ref=e99] [cursor=pointer]
+              - button "Storage Logic" [ref=e100] [cursor=pointer]
+              - button "Supply Chain" [ref=e101] [cursor=pointer]
+            - paragraph [ref=e103]: "Each BPC-157 & TB-500 40mg Research kit includes: Pre-filled Research pen (20mg BPC-157, 20mg TB-500) Research information sheet"
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - heading "Continue Your Research" [level=2] [ref=e107]
+          - paragraph [ref=e108]: Handpicked research kits that pair well with BPC-157 & TB-500 40mg.
+        - generic [ref=e109]:
+          - link "Retatrutide 20mg Product Compound Retatrutide 20mg (R&D Only)" [ref=e111] [cursor=pointer]:
+            - /url: /product/retatrutide-20mg
+            - img "Retatrutide 20mg Product" [ref=e113]
+            - generic [ref=e114]:
+              - generic [ref=e115]: Compound
+              - heading "Retatrutide 20mg (R&D Only)" [level=3] [ref=e116]
+          - link "Tirzepatide 40mg Product Compound Tirzepatide 40mg (R&D Only)" [ref=e118] [cursor=pointer]:
+            - /url: /product/tirzepatide-40mg
+            - img "Tirzepatide 40mg Product" [ref=e120]
+            - generic [ref=e121]:
+              - generic [ref=e122]: Compound
+              - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=e123]
+          - link "Retatrutide 40mg Product Compound Retatrutide 40mg (R&D Only)" [ref=e125] [cursor=pointer]:
+            - /url: /product/retatrutide-40mg
+            - img "Retatrutide 40mg Product" [ref=e127]
+            - generic [ref=e128]:
+              - generic [ref=e129]: Compound
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=e130]
+    - contentinfo [ref=e131]:
+      - generic [ref=e133]:
+        - link [ref=e135] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=e136]
+        - generic [ref=e137]:
+          - link "Shop" [ref=e138] [cursor=pointer]:
+            - /url: /shop
+          - link "About Us" [ref=e139] [cursor=pointer]:
+            - /url: /about
+          - link "Wholesale" [ref=e140] [cursor=pointer]:
+            - /url: /wholesale
+          - link "Home" [ref=e141] [cursor=pointer]:
+            - /url: /
+          - link "Verify" [ref=e142] [cursor=pointer]:
+            - /url: https://spotafakealluvi.com/
+        - generic [ref=e143]:
+          - link "Press Release" [ref=e144] [cursor=pointer]:
+            - /url: /policies/press-release
+          - link "Refund Policy" [ref=e145] [cursor=pointer]:
+            - /url: /policies/refund-policy
+          - link "Shipping Policy" [ref=e146] [cursor=pointer]:
+            - /url: /policies/shipping-policy
+        - generic [ref=e147]:
+          - link "Privacy Policy" [ref=e148] [cursor=pointer]:
+            - /url: /policies/privacy-policy
+          - link "Terms Of Service" [ref=e149] [cursor=pointer]:
+            - /url: /policies/terms-of-service
+          - paragraph [ref=e150]: © 2026 Alluvi. All rights reserved.
+  - button "Wallet" [ref=e151] [cursor=pointer]

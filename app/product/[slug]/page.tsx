@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const path = `/product/${product.slug}`;
-  const title = `${product.title} — Research Peptide`;
+  const title = `${product.title} — Research Reference Peptide`;
   const description = product.desc;
   const image = absoluteUrl(product.img);
 
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: path,
       title: `${title} | ${SITE_NAME}`,
       description,
-      images: [{ url: image, alt: `${product.title} — research peptide` }],
+      images: [{ url: image, alt: `${product.title} — research reference peptide` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -69,7 +69,7 @@ export default async function ProductPage({ params }: PageProps) {
     offers: {
       "@type": "Offer",
       price: product.price,
-      priceCurrency: "GBP",
+      priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: absoluteUrl(`/product/${product.slug}`),
       itemCondition: "https://schema.org/NewCondition",

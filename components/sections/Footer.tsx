@@ -37,7 +37,7 @@ const SOCIALS = [
 ];
 
 const FOOTER_LINKS = ["Home", "About", "Products", "Our Team", "Contact"];
-const UTIL_LINKS = ["Shipping Policy", "Refund Policy", "Terms"];
+const UTIL_LINKS = ["Refund Policy", "Terms"];
 
 function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -209,8 +209,9 @@ export default function Footer() {
         </Reveal>
 
         <div className="pt-4 text-center text-xs text-muted">
-          UK-based · Tracked worldwide shipping · For laboratory research and development use
-          only — not for human or veterinary consumption.
+          Independently tested · Research reference material · For laboratory and analytical
+          use only. Not intended to diagnose, treat, cure, or prevent any disease. Not for human
+          or veterinary use.
         </div>
       </div>
     </footer>

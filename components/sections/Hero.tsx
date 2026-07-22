@@ -65,7 +65,7 @@ export default function Hero() {
               }}
               className="h-display text-white text-[clamp(2.75rem,8vw,5.6rem)]"
             >
-              {["Advancing", "Lab Research"].map((line) => (
+              {["Research-Grade", "Reference Peptides"].map((line) => (
                 <span key={line} className="block overflow-hidden">
                   <motion.span
                     variants={{
@@ -103,8 +103,9 @@ export default function Hero() {
             className="max-w-sm lg:pb-2"
           >
             <p className="text-[15px] leading-relaxed text-white/85 sm:text-[17px]">
-              Premium research peptides for laboratory and in-vitro studies — independently
-              tested, cold-chain shipped. Research use only; not for human consumption.
+              Premium research reference peptides for laboratory and in-vitro analytical work 
+              independently tested and documented to the milligram. For research use only; not
+              for human or veterinary use.
             </p>
             <div className="mt-5 flex items-center gap-4 sm:mt-6 sm:gap-6">
               <div className="shrink-0">

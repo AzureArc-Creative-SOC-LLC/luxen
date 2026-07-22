@@ -1,0 +1,184 @@
+- generic [active] [ref=f3e1]:
+  - link "Skip to main content" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link "LUXEN home" [ref=f3e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e6]: LUXEN
+      - generic [ref=f3e11]:
+        - link "Catalog" [ref=f3e12] [cursor=pointer]:
+          - /url: /#services
+        - button "Open cart" [ref=f3e14]
+  - main [ref=f3e18]:
+    - generic [ref=f3e19]:
+      - navigation "Breadcrumb" [ref=f3e20]:
+        - list [ref=f3e21]:
+          - listitem [ref=f3e22]:
+            - link "Home" [ref=f3e23] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f3e24]: /
+          - listitem [ref=f3e25]:
+            - link "Catalog" [ref=f3e26] [cursor=pointer]:
+              - /url: /#services
+          - listitem [ref=f3e29]: /
+          - listitem [ref=f3e30]: Tirzepatide 40mg (R&D Only)
+      - generic [ref=f3e31]:
+        - generic [ref=f3e32]:
+          - img "Tirzepatide 40mg (R&D Only) — research-grade peptide" [ref=f3e34]
+          - tablist "Product images" [ref=f3e35]:
+            - tab "Show image 1 of 4" [selected] [ref=f3e36]
+            - tab "Show image 2 of 4" [ref=f3e37]
+            - tab "Show image 3 of 4" [ref=f3e38]
+            - tab "Show image 4 of 4" [ref=f3e39]
+        - generic [ref=f3e40]:
+          - paragraph [ref=f3e41]: Compound Analysis
+          - heading "Tirzepatide 40mg (R&D Only)" [level=1] [ref=f3e42]
+          - paragraph [ref=f3e43]:
+            - generic [ref=f3e44]: "Price:"
+            - text: £100GBP
+          - paragraph [ref=f3e45]: A 40mg Tirzepatide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+          - paragraph [ref=f3e50]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - link "View Janoshik Analytical Report" [ref=f3e51] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/147174-ALLUVI_TIRZEPATIDE_40MG_KIT_T5MBWRAYD4HN
+          - generic [ref=f3e59]:
+            - generic [ref=f3e60]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=2] [ref=f3e61]
+              - paragraph [ref=f3e62]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=f3e63]:
+              - generic [ref=f3e64]:
+                - paragraph [ref=f3e65]: Batch Number
+                - paragraph [ref=f3e66]: TR786PAOS
+              - generic [ref=f3e67]:
+                - paragraph [ref=f3e68]: Fill Volume
+                - paragraph [ref=f3e69]: 3 mL
+              - generic [ref=f3e70]:
+                - paragraph [ref=f3e71]: Purity
+                - paragraph [ref=f3e72]: 99.85%
+            - table [ref=f3e74]:
+              - rowgroup [ref=f3e75]:
+                - row [ref=f3e76]:
+                  - columnheader "Compound" [ref=f3e77]
+                  - columnheader "Concentration" [ref=f3e78]
+                  - columnheader "Verified Content" [ref=f3e79]
+              - rowgroup [ref=f3e80]:
+                - row [ref=f3e81]:
+                  - cell "Tirzepatide" [ref=f3e82]
+                  - cell "13.35 mg/mL" [ref=f3e83]
+                  - cell "40.05 mg" [ref=f3e84]
+            - paragraph [ref=f3e85]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+            - button [ref=f3e86]:
+              - generic [ref=f3e91]: +
+          - generic [ref=f3e92]:
+            - generic [ref=f3e93]:
+              - term [ref=f3e94]: Quantity
+              - definition [ref=f3e95]: 40 mg
+            - generic [ref=f3e96]:
+              - term [ref=f3e97]: Purity
+              - definition [ref=f3e98]: ≥99% (HPLC)
+            - generic [ref=f3e99]:
+              - term [ref=f3e100]: Form
+              - definition [ref=f3e101]: Pre-filled research device
+            - generic [ref=f3e102]:
+              - term [ref=f3e103]: Testing
+              - definition [ref=f3e104]: Janoshik third-party
+          - generic [ref=f3e105]:
+            - tablist "Product information" [ref=f3e106]:
+              - tab "Package Contents" [selected] [ref=f3e107]
+              - tab "Storage Logic" [ref=f3e112]
+              - tab "Supply Chain" [ref=f3e126]
+            - list [ref=f3e132]:
+              - listitem [ref=f3e133]: "Each Tirzepatide 40mg Research kit includes:"
+              - listitem [ref=f3e134]: Pre-filled Research pen (40mg Tirzepatide)
+              - listitem [ref=f3e135]: Research information sheet
+          - generic [ref=f3e136]:
+            - group "Quantity selector" [ref=f3e137]:
+              - button "Decrease quantity" [ref=f3e138]
+              - generic [ref=f3e140]: "1"
+              - button "Increase quantity" [ref=f3e141]
+            - button "Add 1 × Tirzepatide 40mg (R&D Only) to cart" [ref=f3e143]: Add to Cart
+          - list [ref=f3e147]:
+            - listitem [ref=f3e148]: ≥99% HPLC purity
+            - listitem [ref=f3e152]: Cold-chain shipped
+            - listitem [ref=f3e166]: Tracked worldwide
+          - paragraph [ref=f3e172]: For laboratory research and development use only — not for human or veterinary consumption.
+      - region [ref=f3e173]:
+        - generic [ref=f3e174]:
+          - heading "Continue Your Research" [level=2] [ref=f3e175]
+          - link "View all" [ref=f3e176] [cursor=pointer]:
+            - /url: /#services
+        - paragraph [ref=f3e177]: Handpicked research kits that pair well with Tirzepatide 40mg (R&D Only).
+        - generic [ref=f3e178]:
+          - link [ref=f3e179] [cursor=pointer]:
+            - /url: /product/bpc-157-tb-500
+            - article [ref=f3e180]:
+              - img "BPC-157 & TB-500 40mg (R&D Only) — research peptide" [ref=f3e182]
+              - generic [ref=f3e183]:
+                - paragraph [ref=f3e184]: Compound
+                - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=3] [ref=f3e185]
+                - paragraph [ref=f3e186]: A regenerative research blend studied across tissue-repair and motility models. Supplied in a pre-filled research device, independently verified by Janoshik Analytical.
+                - generic [ref=f3e187]: £130
+          - link [ref=f3e193] [cursor=pointer]:
+            - /url: /product/retatrutide
+            - article [ref=f3e194]:
+              - img "Retatrutide 40mg (R&D Only) — research peptide" [ref=f3e196]
+              - generic [ref=f3e197]:
+                - paragraph [ref=f3e198]: Compound
+                - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f3e199]
+                - paragraph [ref=f3e200]: Triple-agonist research peptide for metabolic-pathway investigation. Batch-tested for purity, content, and stability by Janoshik Analytical.
+                - generic [ref=f3e201]: £180
+          - link [ref=f3e207] [cursor=pointer]:
+            - /url: /product/glow-ghk-cu
+            - article [ref=f3e208]:
+              - img "Glow 70mg (R&D Only) — research peptide" [ref=f3e210]
+              - generic [ref=f3e211]:
+                - paragraph [ref=f3e212]: Compound
+                - heading "Glow 70mg (R&D Only)" [level=3] [ref=f3e213]
+                - paragraph [ref=f3e214]: Copper-binding tripeptide blend explored in matrix and skin-model research. Precisely measured and independently verified.
+                - generic [ref=f3e215]: £100
+  - contentinfo [ref=f3e221]:
+    - generic [ref=f3e222]:
+      - generic [ref=f3e224]:
+        - generic [ref=f3e225]: LUXEN
+        - generic [ref=f3e231]:
+          - generic [ref=f3e232]:
+            - paragraph [ref=f3e233]: LUXEN supplies premium, independently tested research peptides for laboratories worldwide. Research use only — not for human consumption.
+            - generic [ref=f3e234]:
+              - paragraph [ref=f3e235]: Sign up to receive the latest news and events from us.
+              - generic [ref=f3e236]:
+                - textbox "Your Email*" [ref=f3e237]
+                - button "Subscribe" [ref=f3e238]
+              - generic [ref=f3e239] [cursor=pointer]:
+                - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f3e240]
+                - text: I agree to receive occasional updates from LUXEN.
+          - generic [ref=f3e241]:
+            - link "Home" [ref=f3e242] [cursor=pointer]:
+              - /url: "#"
+            - link "About" [ref=f3e243] [cursor=pointer]:
+              - /url: "#"
+            - link "Products" [ref=f3e244] [cursor=pointer]:
+              - /url: "#"
+            - link "Our Team" [ref=f3e245] [cursor=pointer]:
+              - /url: "#"
+            - link "Contact" [ref=f3e246] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=f3e247]:
+            - generic [ref=f3e248]: Copyright © 2026 LUXEN
+            - generic [ref=f3e249]:
+              - link "Shipping Policy" [ref=f3e250] [cursor=pointer]:
+                - /url: "#"
+              - link "Refund Policy" [ref=f3e251] [cursor=pointer]:
+                - /url: "#"
+              - link "Terms" [ref=f3e252] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=f3e254]:
+        - link "X" [ref=f3e255] [cursor=pointer]:
+          - /url: "#"
+        - link "LinkedIn" [ref=f3e258] [cursor=pointer]:
+          - /url: "#"
+        - link "Dribbble" [ref=f3e261] [cursor=pointer]:
+          - /url: "#"
+        - link "Facebook" [ref=f3e265] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f3e268]: UK-based · Tracked worldwide shipping · For laboratory research and development use only — not for human or veterinary consumption.
+  - button "Open Next.js Dev Tools" [ref=f3e274] [cursor=pointer]

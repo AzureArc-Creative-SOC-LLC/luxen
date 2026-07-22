@@ -25,7 +25,8 @@ export default function Team() {
           <Reveal>
             <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-muted">
               Our chemists and quality specialists oversee synthesis, analytical testing, and
-              compliance — so every compound that leaves the lab meets research-grade standards.
+              compliance — so every reference compound that leaves the lab meets research-grade
+              standards for identity and purity.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

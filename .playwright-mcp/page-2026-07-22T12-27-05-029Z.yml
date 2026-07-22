@@ -1,0 +1,189 @@
+- generic [active] [ref=f2e1]:
+  - link "Skip to main content" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link "LUXEN home" [ref=f2e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f2e6]: LUXEN
+      - generic [ref=f2e11]:
+        - link "Catalog" [ref=f2e12] [cursor=pointer]:
+          - /url: /#services
+        - button "Open cart" [ref=f2e14]
+  - main [ref=f2e18]:
+    - generic [ref=f2e19]:
+      - navigation "Breadcrumb" [ref=f2e20]:
+        - list [ref=f2e21]:
+          - listitem [ref=f2e22]:
+            - link "Home" [ref=f2e23] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f2e24]: /
+          - listitem [ref=f2e25]:
+            - link "Catalog" [ref=f2e26] [cursor=pointer]:
+              - /url: /#services
+          - listitem [ref=f2e29]: /
+          - listitem [ref=f2e30]: Glow 70mg (R&D Only)
+      - generic [ref=f2e31]:
+        - generic [ref=f2e32]:
+          - img "Glow 70mg (R&D Only) — research-grade peptide" [ref=f2e34]
+          - tablist "Product images" [ref=f2e35]:
+            - tab "Show image 1 of 4" [selected] [ref=f2e36]
+            - tab "Show image 2 of 4" [ref=f2e37]
+            - tab "Show image 3 of 4" [ref=f2e38]
+            - tab "Show image 4 of 4" [ref=f2e39]
+        - generic [ref=f2e40]:
+          - paragraph [ref=f2e41]: Compound Analysis
+          - heading "Glow 70mg (R&D Only)" [level=1] [ref=f2e42]
+          - paragraph [ref=f2e43]:
+            - generic [ref=f2e44]: "Price:"
+            - text: £100GBP
+          - paragraph [ref=f2e45]: A 70mg Glow formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+          - paragraph [ref=f2e50]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - link "View Janoshik Analytical Report" [ref=f2e51] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/163217-ALLUVI_GLOW_70MG_KIT_DCL3AJSE4JQP
+          - generic [ref=f2e59]:
+            - generic [ref=f2e60]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=2] [ref=f2e61]
+              - paragraph [ref=f2e62]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=f2e63]:
+              - generic [ref=f2e64]:
+                - paragraph [ref=f2e65]: Batch Number
+                - paragraph [ref=f2e66]: GL0621XSA
+              - generic [ref=f2e67]:
+                - paragraph [ref=f2e68]: Fill Volume
+                - paragraph [ref=f2e69]: 3.4 mL
+            - table [ref=f2e71]:
+              - rowgroup [ref=f2e72]:
+                - row [ref=f2e73]:
+                  - columnheader "Compound" [ref=f2e74]
+                  - columnheader "Concentration" [ref=f2e75]
+                  - columnheader "Verified Content" [ref=f2e76]
+              - rowgroup [ref=f2e77]:
+                - row [ref=f2e78]:
+                  - cell "GHK-Cu" [ref=f2e79]
+                  - cell "7.59 mg/mL" [ref=f2e80]
+                  - cell "25.8 mg" [ref=f2e81]
+                - row [ref=f2e82]:
+                  - cell "BPC-157" [ref=f2e83]
+                  - cell "2.39 mg/mL" [ref=f2e84]
+                  - cell "8.13 mg" [ref=f2e85]
+                - row [ref=f2e86]:
+                  - cell "TB-500" [ref=f2e87]
+                  - cell "1.99 mg/mL" [ref=f2e88]
+                  - cell "6.76 mg" [ref=f2e89]
+            - paragraph [ref=f2e90]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+            - button [ref=f2e91]:
+              - generic [ref=f2e96]: +
+          - generic [ref=f2e97]:
+            - generic [ref=f2e98]:
+              - term [ref=f2e99]: Quantity
+              - definition [ref=f2e100]: 70 mg
+            - generic [ref=f2e101]:
+              - term [ref=f2e102]: Purity
+              - definition [ref=f2e103]: ≥99% (HPLC)
+            - generic [ref=f2e104]:
+              - term [ref=f2e105]: Form
+              - definition [ref=f2e106]: Pre-filled research device
+            - generic [ref=f2e107]:
+              - term [ref=f2e108]: Testing
+              - definition [ref=f2e109]: Janoshik third-party
+          - generic [ref=f2e110]:
+            - tablist "Product information" [ref=f2e111]:
+              - tab "Package Contents" [selected] [ref=f2e112]
+              - tab "Storage Logic" [ref=f2e117]
+              - tab "Supply Chain" [ref=f2e131]
+            - list [ref=f2e137]:
+              - listitem [ref=f2e138]: "Each Glow 70mg Research kit includes:"
+              - listitem [ref=f2e139]: 2 × Pre-filled Research pens (Each pen contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu)
+              - listitem [ref=f2e140]: "Total contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu"
+          - generic [ref=f2e141]:
+            - group "Quantity selector" [ref=f2e142]:
+              - button "Decrease quantity" [ref=f2e143]
+              - generic [ref=f2e145]: "1"
+              - button "Increase quantity" [ref=f2e146]
+            - button "Add 1 × Glow 70mg (R&D Only) to cart" [ref=f2e148]: Add to Cart
+          - list [ref=f2e152]:
+            - listitem [ref=f2e153]: ≥99% HPLC purity
+            - listitem [ref=f2e157]: Cold-chain shipped
+            - listitem [ref=f2e171]: Tracked worldwide
+          - paragraph [ref=f2e177]: For laboratory research and development use only — not for human or veterinary consumption.
+      - region [ref=f2e178]:
+        - generic [ref=f2e179]:
+          - heading "Continue Your Research" [level=2] [ref=f2e180]
+          - link "View all" [ref=f2e181] [cursor=pointer]:
+            - /url: /#services
+        - paragraph [ref=f2e182]: Handpicked research kits that pair well with Glow 70mg (R&D Only).
+        - generic [ref=f2e183]:
+          - link [ref=f2e184] [cursor=pointer]:
+            - /url: /product/bpc-157-tb-500
+            - article [ref=f2e185]:
+              - img "BPC-157 & TB-500 40mg (R&D Only) — research peptide" [ref=f2e187]
+              - generic [ref=f2e188]:
+                - paragraph [ref=f2e189]: Compound
+                - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=3] [ref=f2e190]
+                - paragraph [ref=f2e191]: A regenerative research blend studied across tissue-repair and motility models. Supplied in a pre-filled research device, independently verified by Janoshik Analytical.
+                - generic [ref=f2e192]: £130
+          - link [ref=f2e198] [cursor=pointer]:
+            - /url: /product/retatrutide
+            - article [ref=f2e199]:
+              - img "Retatrutide 40mg (R&D Only) — research peptide" [ref=f2e201]
+              - generic [ref=f2e202]:
+                - paragraph [ref=f2e203]: Compound
+                - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f2e204]
+                - paragraph [ref=f2e205]: Triple-agonist research peptide for metabolic-pathway investigation. Batch-tested for purity, content, and stability by Janoshik Analytical.
+                - generic [ref=f2e206]: £180
+          - link [ref=f2e212] [cursor=pointer]:
+            - /url: /product/tirzepatide
+            - article [ref=f2e213]:
+              - img "Tirzepatide 40mg (R&D Only) — research peptide" [ref=f2e215]
+              - generic [ref=f2e216]:
+                - paragraph [ref=f2e217]: Compound
+                - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=f2e218]
+                - paragraph [ref=f2e219]: Dual GIP/GLP-1 receptor research compound for in-vitro metabolic studies. Each lot ships with a Janoshik certificate of analysis.
+                - generic [ref=f2e220]: £100
+  - contentinfo [ref=f2e226]:
+    - generic [ref=f2e227]:
+      - generic [ref=f2e229]:
+        - generic [ref=f2e230]: LUXEN
+        - generic [ref=f2e236]:
+          - generic [ref=f2e237]:
+            - paragraph [ref=f2e238]: LUXEN supplies premium, independently tested research peptides for laboratories worldwide. Research use only — not for human consumption.
+            - generic [ref=f2e239]:
+              - paragraph [ref=f2e240]: Sign up to receive the latest news and events from us.
+              - generic [ref=f2e241]:
+                - textbox "Your Email*" [ref=f2e242]
+                - button "Subscribe" [ref=f2e243]
+              - generic [ref=f2e244] [cursor=pointer]:
+                - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f2e245]
+                - text: I agree to receive occasional updates from LUXEN.
+          - generic [ref=f2e246]:
+            - link "Home" [ref=f2e247] [cursor=pointer]:
+              - /url: "#"
+            - link "About" [ref=f2e248] [cursor=pointer]:
+              - /url: "#"
+            - link "Products" [ref=f2e249] [cursor=pointer]:
+              - /url: "#"
+            - link "Our Team" [ref=f2e250] [cursor=pointer]:
+              - /url: "#"
+            - link "Contact" [ref=f2e251] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=f2e252]:
+            - generic [ref=f2e253]: Copyright © 2026 LUXEN
+            - generic [ref=f2e254]:
+              - link "Shipping Policy" [ref=f2e255] [cursor=pointer]:
+                - /url: "#"
+              - link "Refund Policy" [ref=f2e256] [cursor=pointer]:
+                - /url: "#"
+              - link "Terms" [ref=f2e257] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=f2e259]:
+        - link "X" [ref=f2e260] [cursor=pointer]:
+          - /url: "#"
+        - link "LinkedIn" [ref=f2e263] [cursor=pointer]:
+          - /url: "#"
+        - link "Dribbble" [ref=f2e266] [cursor=pointer]:
+          - /url: "#"
+        - link "Facebook" [ref=f2e270] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f2e273]: UK-based · Tracked worldwide shipping · For laboratory research and development use only — not for human or veterinary consumption.
+  - button "Open Next.js Dev Tools" [ref=f2e279] [cursor=pointer]
